@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Julián J. Galiano Cruz | IT, Cybersecurity &amp; Data</title>
+<meta name="description" content="Julian: IT professional working in cybersecurity, project coordination and data analysis.">
+<meta name="theme-color" content="#0e0a1f">
+<meta property="og:title" content="Julian | IT, Cybersecurity &amp; Data">
+<meta property="og:description" content="Cybersecurity, project coordination and data analysis. Builder of Arena Companion.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3 L58 13 V35 C58 50 47 59 32 62 C17 59 6 50 6 35 V13 Z' fill='%230e0a1f' stroke='%23b78cff' stroke-width='3'/%3E%3Ctext x='32' y='44' font-family='Arial' font-weight='900' font-size='28' text-anchor='middle' fill='white'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap">
+<style>
+/* Night Shift (purple): starfield canvas behind; hero with photo, three role tiles, one featured project, slim footer */
+:root{--bg:#0e0a1f;--panel:rgba(28,20,54,.82);--line:#2d2252;--line2:#433470;--fg:#efe9fc;--muted:#b8acd9;--cyan:#b78cff;
+  --sans:Sora,system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.65}
+a{color:var(--cyan);text-underline-offset:3px}
+a:hover{color:#d9c2ff}
+a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.page{max-width:1080px;margin:0 auto;padding-block:64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:56px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:48px}
+.hero-text{flex:1 1 480px;min-width:0;display:flex;flex-direction:column;gap:18px}
+h1{margin:0;font-size:clamp(64px,13vw,112px);font-weight:800;line-height:.95;letter-spacing:-.03em}
+.lede{margin:0;font-size:21px;color:var(--muted);max-width:34ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;transition:background .2s,border-color .2s}
+.btn.primary{background:var(--cyan);color:var(--bg)}
+.btn.primary:hover{background:#d9c2ff;color:var(--bg)}
+.btn.ghost{border:1px solid var(--line2);color:var(--fg)}
+.btn.ghost:hover{border-color:var(--cyan)}
+.shield{flex:0 1 260px;display:flex;justify-content:center}
+.photo{width:100%;max-width:260px;height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;border:4px solid var(--cyan);box-shadow:0 0 0 10px var(--panel),0 0 40px rgba(183,140,255,.45)}
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+.tile b{display:block;color:var(--cyan);font-weight:600}
+.tile span{color:var(--muted);font-size:15px}
+.feature{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px;display:flex;flex-wrap:wrap;gap:28px;align-items:center}
+.shot{flex:1 1 400px;aspect-ratio:16/9;max-width:100%;border-radius:10px;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;font-size:13px;color:#9a8fbd}
+.feature-text{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:12px}
+h2{margin:0;font-size:34px;font-weight:800}
+.feature p,.about p{margin:0;color:var(--muted)}
+.about{max-width:62ch}
+.about h2{font-size:26px;margin-bottom:8px}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px}
+.sec{display:flex;flex-direction:column;gap:20px}
+.sec>h2{font-size:30px}
+.timeline{display:flex;flex-direction:column;border-left:2px solid var(--line2);margin-left:6px}
+.job{position:relative;padding:0 0 28px 28px}
+.job:last-child{padding-bottom:0}
+.job::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--cyan)}
+.job h3{margin:0;font-size:20px;font-weight:600}
+.job .when{color:var(--cyan);font-size:14px}
+.job p{margin:6px 0 0;color:var(--muted);max-width:66ch}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.card h3{margin:0;font-size:20px;font-weight:800}
+.item b{display:block;font-weight:600}
+.item span{color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line2);border-radius:999px;padding:6px 14px;font-size:14px}
+.fullname{color:var(--muted);font-size:15px;margin-top:-8px}
+#stars{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(60% 50% at 80% 10%,rgba(140,90,255,.18),transparent 70%),radial-gradient(50% 40% at 10% 90%,rgba(90,60,200,.14),transparent 70%)}
+.page{position:relative;z-index:1}
+.tile,.card,.feature{-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+h1{text-shadow:0 0 40px rgba(183,140,255,.35)}
+.status{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 12px;border:1px solid var(--line2);border-radius:999px;background:var(--panel);font-size:14px;font-weight:600;color:var(--fg)}
+.pulse{width:9px;height:9px;border-radius:50%;background:#6ee7a0;box-shadow:0 0 0 0 rgba(110,231,160,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(110,231,160,0)}100%{box-shadow:0 0 0 0 rgba(110,231,160,0)}}
+.sec .chips .chip{background:var(--panel);font-size:15px;padding:8px 16px}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+.lc{width:100%;height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0;padding:14px}
+.lc-p{border-radius:10px;background:linear-gradient(160deg,#2a1f4f,#17112e);border:1px solid var(--line2);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-width:0}
+.lc-p.me{background:linear-gradient(160deg,#4b2f8f,#241552);border-color:var(--cyan)}
+.lc-who{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.lc-n{font-size:clamp(40px,7vw,64px);font-weight:800;line-height:1;color:var(--fg);font-variant-numeric:tabular-nums}
+.lc-b{display:flex;gap:10px}
+.lc-b span{width:30px;height:30px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;color:var(--fg);font-weight:600}
+.lc-mid{display:grid;place-items:center;padding:0 12px;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--cyan)}
+@media (max-width:640px){.page{padding-block:40px;gap:44px}.shield{order:-1;flex-basis:100%;justify-content:flex-start}.photo{max-width:160px}}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<script>
+(function(){
+var c=document.getElementById('stars'),x=c.getContext('2d'),stars=[],w,h,dpr,still=matchMedia('(prefers-reduced-motion: reduce)').matches,last=0,run=true,shot=null,nextShot=25000,ufo=null,nextUfo=45000;
+function size(){dpr=Math.min(window.devicePixelRatio||1,2);w=innerWidth;h=innerHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+ var n=Math.round(w*h/9000);stars=[];for(var i=0;i<n;i++){var big=Math.random()<.08;stars.push({x:Math.random()*w,y:Math.random()*h,r:big?1.4+Math.random()*1.2:.4+Math.random()*.9,p:Math.random()*6.28,s:.6+Math.random()*1.6,big:big,hue:Math.random()<.5?'255,255,255':'214,190,255'})}draw(0)}
+function draw(t){x.clearRect(0,0,w,h);for(var i=0;i<stars.length;i++){var s=stars[i],a=still?.7:.35+.65*(.5+.5*Math.sin(s.p+t/1000*s.s));
+ x.fillStyle='rgba('+s.hue+','+a+')';x.beginPath();x.arc(s.x,s.y,s.r,0,6.283);x.fill();
+ if(s.big){x.strokeStyle='rgba('+s.hue+','+a*.5+')';x.lineWidth=.6;x.beginPath();x.moveTo(s.x-s.r*4,s.y);x.lineTo(s.x+s.r*4,s.y);x.moveTo(s.x,s.y-s.r*4);x.lineTo(s.x,s.y+s.r*4);x.stroke();
+ var g=x.createRadialGradient(s.x,s.y,0,s.x,s.y,s.r*6);g.addColorStop(0,'rgba(183,140,255,'+a*.35+')');g.addColorStop(1,'rgba(183,140,255,0)');x.fillStyle=g;x.beginPath();x.arc(s.x,s.y,s.r*6,0,6.283);x.fill()}}
+ if(still)return;
+ if(!ufo&&t>=nextUfo&&!shot){var d=Math.random()<.5?1:-1;ufo={t0:t,dir:d,y:h*(.14+Math.random()*.22),dur:8000+Math.random()*3000,sc:Math.max(.7,Math.min(1.1,w/1200))}}
+ if(ufo){var q=(t-ufo.t0)/ufo.dur;if(q>=1){ufo=null;nextUfo=t+30000+Math.random()*60000}else{drawUfo(ufo,q,t)}}
+ if(!shot&&t>=nextShot){var dir=Math.random()<.5?1:-1,ang=(18+Math.random()*20)*Math.PI/180;shot={t0:t,x:dir>0?Math.random()*w*.6:w*.4+Math.random()*w*.6,y:Math.random()*h*.35,dx:Math.cos(ang)*dir,dy:Math.sin(ang),dist:Math.min(w,h)*(.5+Math.random()*.4),dur:1100+Math.random()*500,len:140+Math.random()*90}}
+ if(shot){var k=(t-shot.t0)/shot.dur;if(k>=1){shot=null;nextShot=t+12000+Math.random()*33000;return}
+  var e=1-Math.pow(1-k,2),hx=shot.x+shot.dx*shot.dist*e,hy=shot.y+shot.dy*shot.dist*e,fade=k<.15?k/.15:k>.75?(1-k)/.25:1,
+  tx=hx-shot.dx*shot.len,ty=hy-shot.dy*shot.len,lg=x.createLinearGradient(hx,hy,tx,ty);
+  lg.addColorStop(0,'rgba(255,255,255,'+fade+')');lg.addColorStop(.25,'rgba(214,190,255,'+fade*.7+')');lg.addColorStop(1,'rgba(183,140,255,0)');
+  x.strokeStyle=lg;x.lineWidth=2;x.lineCap='round';x.beginPath();x.moveTo(hx,hy);x.lineTo(tx,ty);x.stroke();
+  var hg=x.createRadialGradient(hx,hy,0,hx,hy,10);hg.addColorStop(0,'rgba(255,255,255,'+fade+')');hg.addColorStop(.4,'rgba(200,170,255,'+fade*.5+')');hg.addColorStop(1,'rgba(183,140,255,0)');
+  x.fillStyle=hg;x.beginPath();x.arc(hx,hy,10,0,6.283);x.fill()}
+}
+function drawUfo(u,q,t){var m=110*u.sc,ux=u.dir>0?-m+(w+2*m)*q:w+m-(w+2*m)*q,uy=u.y+Math.sin(t/420)*6,s=u.sc;
+ x.save();x.translate(ux,uy);x.scale(s,s);
+ var bw=Math.sin(t/300)*.08;
+ /* tractor beam */
+ var bg=x.createLinearGradient(0,8,0,120);bg.addColorStop(0,'rgba(190,255,200,.38)');bg.addColorStop(1,'rgba(190,255,200,0)');
+ x.fillStyle=bg;x.beginPath();x.moveTo(-14,8);x.lineTo(14,8);x.lineTo(38,120);x.lineTo(-38,120);x.closePath();x.fill();
+ /* cow, swaying in the beam */
+ x.save();x.translate(0,82);x.rotate(bw+Math.sin(t/650)*.12);
+ x.fillStyle='#f4f1ea';x.strokeStyle='#1a1426';x.lineWidth=1.4;
+ [-11,-5,6,12].forEach(function(lx){x.beginPath();x.rect(lx-1.6,6,3.2,10);x.fill();x.stroke()});
+ x.beginPath();x.ellipse(0,0,17,10,0,0,6.283);x.fill();x.stroke();
+ x.fillStyle='#1a1426';x.beginPath();x.ellipse(-6,-3,5,3.5,.4,0,6.283);x.fill();x.beginPath();x.ellipse(7,3,4,3,-.3,0,6.283);x.fill();
+ x.fillStyle='#f4f1ea';x.beginPath();x.ellipse(19,-6,7,5.5,-.3,0,6.283);x.fill();x.stroke();
+ x.fillStyle='#f2a7b8';x.beginPath();x.ellipse(24,-4,3.6,3,0,0,6.283);x.fill();
+ x.fillStyle='#1a1426';x.beginPath();x.arc(17,-8,1.1,0,6.283);x.fill();
+ x.strokeStyle='#f4f1ea';x.lineWidth=1.6;x.beginPath();x.moveTo(15,-10);x.lineTo(13,-15);x.moveTo(20,-11);x.lineTo(21,-16);x.stroke();
+ x.strokeStyle='#1a1426';x.lineWidth=1.2;x.beginPath();x.moveTo(-17,-1);x.quadraticCurveTo(-23,2,-21,8);x.stroke();
+ x.restore();
+ /* saucer */
+ x.fillStyle='rgba(200,180,255,.25)';x.beginPath();x.ellipse(0,-10,18,15,0,Math.PI,0);x.fill();
+ x.strokeStyle='rgba(230,220,255,.8)';x.lineWidth=1.2;x.stroke();
+ var sg=x.createLinearGradient(0,-10,0,10);sg.addColorStop(0,'#9b8bc4');sg.addColorStop(1,'#4b3d78');
+ x.fillStyle=sg;x.beginPath();x.ellipse(0,0,46,11,0,0,6.283);x.fill();
+ x.strokeStyle='rgba(230,220,255,.6)';x.stroke();
+ for(var i=-3;i<=3;i++){var on=Math.floor(t/180+i)%3===0;x.fillStyle=on?'#c9ffd2':'rgba(201,255,210,.35)';x.beginPath();x.arc(i*12,2,2.4,0,6.283);x.fill()}
+ x.restore()}
+function loop(t){if(!run)return;if(shot||ufo||t-last>50||t>=nextShot||t>=nextUfo){draw(t);last=t}requestAnimationFrame(loop)}
+var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(size,150)});
+document.addEventListener('visibilitychange',function(){run=!document.hidden;if(run&&!still){var n=performance.now();if(nextShot<n+3000&&!shot)nextShot=n+3000;if(nextUfo<n+5000&&!ufo)nextUfo=n+5000;requestAnimationFrame(loop)}});
+size();if(!still)requestAnimationFrame(loop);
+})();
+</script>
+<main class="page">
+<header class="hero">
+<div class="hero-text">
+<span class="status"><span class="pulse" aria-hidden="true"></span>Open to opportunities · Remote preferred</span>
+<span class="eyebrow">Cybersecurity · Projects · Data</span>
+<h1>Julian</h1>
+<div class="fullname">Julián J. Galiano Cruz</div>
+<p class="lede">IT professional working in cybersecurity, project coordination and data analysis.</p>
+<div class="btns">
+<a class="btn primary" href="https://www.linkedin.com/in/juli%C3%A1n-galiano-360a47209/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn ghost" href="https://github.com/Bambam0228" target="_blank" rel="noopener">GitHub</a>
+<a class="btn ghost" href="Julian-Galiano-Resume.pdf" download="Julian-Galiano-Resume.pdf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px;margin-right:6px"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>Download resume</a>
+</div>
+</div>
+<div class="shield"><img src="julian.jpg" alt="Photo of Julián" width="600" height="600" decoding="async" class="photo"></div>
+</header>
+<section class="roles" aria-label="What I do">
+<div class="tile"><b>IT</b><span>Supporting users, hardware and servers.</span></div>
+<div class="tile"><b>Cybersecurity</b><span>Keeping systems and data safe.</span></div>
+<div class="tile"><b>Project Coordinator</b><span>Keeping projects on track.</span></div>
+<div class="tile"><b>Data Analyst</b><span>Turning data into answers.</span></div>
+</section>
+<section class="sec">
+<span class="eyebrow">Every day</span><h2>Tools I work with</h2>
+<div class="chips">
+<span class="chip">Microsoft Word</span>
+<span class="chip">Microsoft Excel</span>
+<span class="chip">Computer setup &amp; imaging (cloning)</span>
+<span class="chip">Network switch configuration</span>
+</div>
+</section>
+<section class="sec"><span class="eyebrow">Career</span><h2>Experience</h2><div class="timeline"><div class="job"><span class="when">Oct 2025 – Present · Mayagüez, PR</span><h3>Project Coordinator · MEDX Cybersecurity Project</h3><p>Coordinate the installation and deployment of security cameras, network switches and servers, and help put cybersecurity and physical security measures in place across project sites.</p></div><div class="job"><span class="when">Feb 2025 – May 2025 · Mayagüez, PR</span><h3>IT Intern · MEDX</h3><p>Programmed computers, installed and maintained software and hardware, and provided technical support.</p></div><div class="job"><span class="when">Aug 2023 – 2025 · Mayagüez, PR</span><h3>IT Department · PUCPR</h3><p>Helped users with computer issues, troubleshot and repaired hardware, built custom computers and kept servers running properly.</p></div></div></section>
+<section class="two">
+<div class="card"><h3>Education</h3><div class="item"><b>Master's Degree in Information Technology</b><span>Northbridge University · Mayagüez, PR<br>Apr 2026 – Present</span></div><div class="item"><b>Information Systems (IT), Major Field of Study</b><span>Pontificia Universidad Católica · Mayagüez, PR<br>Aug 2020 – May 2025</span></div><div class="item"><b>High School Diploma</b><span>Lola Rodríguez de Tió · San Germán, PR<br>May 2020 · 3.6 GPA · Team leader</span></div></div>
+<div class="card"><h3>Activities</h3><div class="item"><b>Student Body Council</b><span>Secretary & Representative, Pontificia Universidad Católica</span></div><div class="item"><b>ACM</b><span>Member, Association for Computing Machinery</span></div><div class="item"><b>SkillsUSA</b><span>Member</span></div><div class="item"><b>PGA</b><span>Secretary, Pionero Gaming Association</span></div></div>
+</section>
+<section class="two">
+<div class="card"><h3>Skills</h3><div class="chips"><span class="chip">Microsoft Word, Excel, Access & PowerPoint</span><span class="chip">Data entry</span><span class="chip">Hardware installation & configuration</span><span class="chip">Technical support & troubleshooting</span><span class="chip">Team leadership</span><span class="chip">Multitasking</span><span class="chip">Fast worker & fast learner</span></div></div>
+<div class="card"><h3>Languages</h3><div class="chips"><span class="chip">Spanish</span><span class="chip">English</span></div></div>
+</section>
+<section class="feature">
+<div class="shot" role="img" aria-label="Illustration of the Arena Companion life counter">
+<div class="lc">
+<div class="lc-p"><span class="lc-who">Opponent</span><span class="lc-n">36</span><div class="lc-b"><span>−</span><span>+</span></div></div>
+<div class="lc-mid"><span>VS</span></div>
+<div class="lc-p me"><span class="lc-who">You</span><span class="lc-n">40</span><div class="lc-b"><span>−</span><span>+</span></div></div>
+</div>
+</div>
+<div class="feature-text">
+<span class="eyebrow" style="font-size:12px">Featured project</span>
+<h2>Arena Companion</h2>
+<p>A companion web app for Flesh and Blood players: life counter and match tools for the table.</p>
+<a href="https://missingarsenal.netlify.app" target="_blank" rel="noopener" style="font-weight:600">Open the app →</a>
+</div>
+</section>
+<section class="sec"><span class="eyebrow">Off the clock</span><h2>Hobbies</h2><div class="roles"><div class="tile"><b>Card collector</b><span>Collecting trading cards</span></div><div class="tile"><b>Competitive MTG player</b><span>Competing in Magic: The Gathering tournaments</span></div></div></section>
+<section class="about">
+<h2>About</h2>
+<p>I'm Julian, an IT guy who works in cybersecurity. I also work as a project coordinator and data analyst, so my days move between keeping systems safe, keeping projects on track, and turning data into answers.</p>
+<p style="margin-top:12px">Fun fact: my dream pet is a raccoon. They're clever, they work the night shift, and they can get past almost any lock, so as a security guy I figure we'd have a lot to talk about.</p>
+<p style="margin-top:12px">Right now I'm focused on getting hands-on experience in the tech industry. I value real-world experience, so certifications will come after I've put the skills to work.</p>
+</section>
+<footer><span>juliancruz0228@gmail.com</span><span>© 2026 Julian</span></footer>
+</main>
+</body>
+</html>
