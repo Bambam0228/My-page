@@ -94,8 +94,10 @@ h1{text-shadow:0 0 40px rgba(183,140,255,.35)}
 @media (prefers-reduced-motion:reduce){.pulse{animation:none}}
 .lc-p.me{background:linear-gradient(160deg,#4b2f8f,#241552);border-color:var(--cyan)}
 .cert{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-wrap:wrap;align-items:center;gap:24px}
-.cert-badge{width:112px;height:112px;flex:none;filter:grayscale(1) opacity(.75);transition:filter .3s}
-.cert-badge:hover{filter:none}
+.cert-badge{width:112px;height:112px;flex:none;filter:grayscale(1) brightness(.5);opacity:.85;transition:filter .8s,opacity .8s}
+.cert.done .cert-badge{filter:drop-shadow(0 0 14px rgba(255,90,110,.55)) drop-shadow(0 0 28px rgba(183,140,255,.35));opacity:1;animation:lightup 1.4s ease-out}
+@keyframes lightup{0%{filter:grayscale(1) brightness(.5);transform:scale(.92)}60%{filter:brightness(1.35) drop-shadow(0 0 22px rgba(255,90,110,.8));transform:scale(1.06)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.cert.done .cert-badge{animation:none}}
 .cert-body{flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:14px}
 .cert-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px}
 .cert-head h3{margin:0;font-size:22px;font-weight:800}
@@ -417,6 +419,9 @@ btns.forEach(function(b){b.addEventListener('click',function(){
  btns.forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');
  main.style.opacity=0;setTimeout(function(){main.src=b.dataset.src;main.alt=b.dataset.alt;main.style.opacity=1},150);
 })})})();
+</script>
+<script>
+document.querySelectorAll('.cert').forEach(function(c){var p=parseFloat(getComputedStyle(c).getPropertyValue('--p'))||0;if(p>=100)c.classList.add('done')});
 </script>
 </body>
 </html>
